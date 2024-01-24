@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cover Letter Writer</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <main>
+        <a href="https://enriquenv.github.io/coverletter-writer-ai/"><h1 class="title is-1 has-text-link">Cover Letter Writer</h1></a>
+    <div class="input-area">
+        <div>
+        <textarea id="cv" class="textarea" placeholder="Paste your CV here" required></textarea><br>
+        <div class="control">
+            Save CV on this device?
+            <label class="radio">
+              <input type="radio" name="save" id="save-no" value="no" checked>
+              <label for="save-no">No</label>
+            </label>
+            <label class="radio">
+              <input type="radio" name="save" id="save-yes" value="yes">
+              <label for="save-yes">Yes</label>
+            </label>
+        </div>
+
+        </div>
+        <textarea id="position" class="textarea" placeholder="Paste the position you are applying to here" required></textarea>
+        <textarea id="mention" class="textarea" placeholder="(Optional) Anything that should be mentioned in the cover letter (specially important if it's not obvious from the CV)" rows="3"></textarea>
+    </div>
+    <div id="input2">
+        
+    
+    Cover letter language:
+    <select class="select is-info" id="language">
+        <option value="English">English</option>
+        <option value="French">French</option>
+        <option value="German">German</option>
+        <option value="Portuguese">Portuguese</option>
+        <option value="Russian">Russian</option>
+        <option value="Spanish">Spanish</option>
+    </select>
+    <br>
+    <button onclick="createCoverLetter()" class="button is-link">Create Cover Letter</button>
+    <img id="loading" src="robot.gif" style="display: none;">
+    <div id="cover-letter" class="box" style="display: none;"></div>
+    <button id="copyButton" style="display: none;" class="button is-link">Copy & Share</button>
+    </main>
+    <script src="script.js"></script>
+    </div>
+</body>
+</html>
