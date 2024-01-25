@@ -2,31 +2,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 body {
-    margin: 1vh 20px 10px 1px;
+    margin: 1vh 20px 10px 20px;
 }
 
 h1 {
     text-align: center;
     font-family: 'Lobster', sans-serif;
-    color: blue;
-    font-size: 2em;
 }
 
 textarea {
-    margin: 10px;
-}
-
-#radio-title{
-    margin-left: 55px;
+    margin: 10px 0;
 }
 
 .control {
     margin-left: 10px;
 }
-#input2 {
+
+#input2{
+    text-align: center;
+    margin-top: 25px;
+}
+
+#response {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
@@ -41,11 +40,11 @@ textarea {
 }
 
 @media (max-width: 609px) {
-
-    .input-area {
-        flex-direction: column;
+    .column {
+        padding: 0;
     }
-    textarea {
-        width:  calc(100vw - 31px);
+
+    #cv {
+        margin-top: 25px;
     }
 }

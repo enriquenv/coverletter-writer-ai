@@ -39,13 +39,26 @@ function createCoverLetter() {
 }
 
 window.onload = function() {
-    var saveCv = document.getElementById('save-yes');
+    var saveCvYes = document.getElementById('save-yes');
+    var saveCvNo = document.getElementById('save-no');
     var cv = document.getElementById('cv');
-    cv.value = localStorage.getItem('cv');
-    saveCv.onchange = function() {
-        if (saveCv.checked) {
+    var savedCv = localStorage.getItem('cv');
+
+    if (savedCv) {
+        cv.value = savedCv;
+        saveCvYes.checked = true;
+    } else {
+        saveCvNo.checked = true;
+    }
+
+    saveCvYes.onchange = function() {
+        if (saveCvYes.checked) {
             localStorage.setItem('cv', cv.value);
-        } else {
+        }
+    };
+
+    saveCvNo.onchange = function() {
+        if (saveCvNo.checked) {
             localStorage.removeItem('cv');
         }
     };
